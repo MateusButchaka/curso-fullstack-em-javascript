@@ -1,1 +1,1 @@
-# curso-fullstack-em-javascript
+# Curso de Full-Stack JavaScript
