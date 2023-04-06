@@ -9,22 +9,19 @@ function relogio() {
   let segundos = 0;
   let timer;
 
-  const iniciaRelogio = () =>
-    (timer = setInterval(() => {
+  const iniciaRelogio = () => {
+    timer = setInterval(() => {
       segundos++;
       relogio.innerHTML = criaHoraDosSegundos(segundos);
-    }, 1000));
+    }, 1000);
+  };
 
-  document.addEventListener('click', ({ target }) => {
+  document.addEventListener('click', e => {
     clearInterval(timer);
-    relogio.classList.remove('pausado');
-
-    target.classList.contains('zerar') &&
-      ((segundos = 0), (relogio.innerHTML = '00:00:00'));
-
-    target.classList.contains('iniciar') && iniciaRelogio();
-
-    target.classList.contains('pausar') && relogio.classList.add('pausado');
+    const el = e.target;
+    el.classList.contains('zerar') && ((segundos = 0), (relogio.innerHTML = '00:00:00'));
+    el.classList.contains('iniciar') && iniciaRelogio();
+    el.classList.contains('pausar') && relogio.classList.add('pausado');
   });
 }
 
