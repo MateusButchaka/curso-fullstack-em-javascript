@@ -24,5 +24,4 @@ function relogio() {
     el.classList.contains('pausar') && relogio.classList.add('pausado');
   });
 }
-
 relogio();
