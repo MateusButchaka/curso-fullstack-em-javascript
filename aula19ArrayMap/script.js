@@ -1,16 +1,14 @@
 //dobre o numero
 const numero = [5, 34, 55, 6, 77, 764,]
-const numeroFiltrado = numero.map(function(valor) {
-    return valor * 2;
-});
+const numeroFiltrado = numero.map(valor =>  valor * 2);
 
 console.log(numeroFiltrado);
 //Para cada elemento retorne apenas uma string com nome da pessoa
 
 const pessoas = [
     {nome: 'mateus', idade: 18 },
-    {nome: 'maria', idade: 198 },
-    {nome: 'junior', idade: 66 },
+    {nome: 'maria', idade: 68 },
+    {nome: 'junior', idade: 666 },
     {nome: 'lazaro', idade: 93 },
     {nome: 'jo', idade: 24 },
 ];
